@@ -1,7 +1,6 @@
 {
   "platform": "virtualbox",
-  "box_name": "playa_mesos_ubuntu_14.04_201601041324",
-  "base_url": "http://downloads.mesosphere.io/playa-mesos",
+  "box_name": "codenrhoden/playa_mesos_0.25",
   "hosts": {
     "mesos-master": {
       "ip": "10.141.141.10",
