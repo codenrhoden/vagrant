@@ -80,7 +80,7 @@
       "type": "shell"
     },
     {
-      "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}' --slave-hostname {{user `ip_address`}}",
+      "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}' --slave-hostname {{user `ip_address`}} --rel 0.25.0-0.2.70.ubuntu1404",
       "scripts": [
         "{{user `scripts`}}/common/mesosflexinstall"
       ],
@@ -89,6 +89,7 @@
     {
       "execute_command": "echo 'vagrant'|{{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
+        "{{user `scripts`}}/ubuntu/diego-cell",
         "{{user `scripts`}}/ubuntu/cleanup",
         "{{user `scripts`}}/common/minimize"
       ],
